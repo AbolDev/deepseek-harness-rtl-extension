@@ -28,6 +28,20 @@
 
 بعد از نصب، تشخیص جهت خودکار است. برای دسترسی آسان به کلید روشن/خاموش، آیکون افزونه را به نوار ابزار سنجاق کنید.
 
+### پشتیبانی مرورگرها
+
+افزونه با Manifest V3 ساخته شده و روی **Google Chrome** تست می‌شود. در هر مرورگر مبتنی بر Chromium هم با همان مراحل **Load unpacked** کار می‌کند:
+
+- Microsoft Edge (`edge://extensions`)، Brave (`brave://extensions`)، Opera، Vivaldi و Arc.
+
+**Firefox نسخهٔ ۱۰۹ به بعد** هم پشتیبانی می‌شود. کد افزونه فقط از APIهایی استفاده می‌کند که Firefox آن‌ها را پیاده‌سازی کرده است؛ بنابراین همان پوشه بدون هیچ تغییری به‌صورت افزونهٔ موقت در Firefox بارگذاری می‌شود:
+
+1. آدرس `about:debugging#/runtime/this-firefox` را باز کنید.
+2. روی **Load Temporary Add-on** کلیک کنید.
+3. فایل `manifest.json` داخل پوشهٔ **DeepSeek Harness RTL - Chrome Extension** را انتخاب کنید.
+
+Firefox افزونه‌های موقت را هنگام بستن مرورگر حذف می‌کند؛ پس پس از هر بار بازکردن مرورگر باید این مراحل را تکرار کنید. نصب دائمی در Firefox نیازمند انتشار نسخهٔ امضاشده در [addons.mozilla.org](https://addons.mozilla.org) است. برای چنین بسته‌ای، فایل `manifest.firefox.json` (شامل بخش الزامی `browser_specific_settings.gecko`) در مخزن موجود است. Safari پشتیبانی نمی‌شود؛ تبدیل افزونه به Safari نیازمند ابزار `safari-web-extension-converter` اپل در macOS است.
+
 ### صفحه‌های پشتیبانی‌شده
 
 - http://127.0.0.1:3080
@@ -61,7 +75,7 @@
 
 ~~~text
 DeepSeek Harness RTL - Chrome Extension/
-  manifest.json
+  manifest.json / manifest.firefox.json
   content.js / content.css
   popup.html / popup.js / popup.css
   icons/

@@ -28,6 +28,20 @@ This extension adjusts text direction, not the overall app layout. It is an inde
 
 Direction detection is automatic after installation. Pin the extension to the toolbar to access its switch easily.
 
+### Browser support
+
+The extension uses Manifest V3 and is tested on **Google Chrome**. It also works, with the same **Load unpacked** steps, on any Chromium-based browser:
+
+- Microsoft Edge (`edge://extensions`), Brave (`brave://extensions`), Opera, Vivaldi, and Arc.
+
+**Firefox 109 or newer** is also supported. The extension code only uses APIs that Firefox implements (storage and the `chrome.*` namespace), so the same folder loads unchanged as a temporary add-on:
+
+1. Open `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on**.
+3. Select the `manifest.json` file inside **DeepSeek Harness RTL - Chrome Extension**.
+
+Firefox removes temporary add-ons when the browser is closed, so repeat these steps after restarting. A permanent Firefox installation requires publishing a signed build on [addons.mozilla.org](https://addons.mozilla.org); the repository includes `manifest.firefox.json` (with the required `browser_specific_settings.gecko` block) for packaging such a build. Safari is not supported; converting the extension would require Apple's `safari-web-extension-converter` on macOS.
+
 ### Supported pages
 
 - http://127.0.0.1:3080
@@ -61,7 +75,7 @@ The only declared API permission is **storage**, used to save the enabled prefer
 
 ~~~text
 DeepSeek Harness RTL - Chrome Extension/
-  manifest.json
+  manifest.json / manifest.firefox.json
   content.js / content.css
   popup.html / popup.js / popup.css
   icons/
