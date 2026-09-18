@@ -17,6 +17,12 @@ A lightweight Chrome extension that makes Persian, Arabic, and Hebrew text read 
 
 This extension adjusts text direction, not the overall app layout. It is an independent project, not an official DeepSeek Harness extension.
 
+## Popup preview
+
+| Light | Dark |
+| --- | --- |
+| ![Popup in light theme](docs/popup-light.png) | ![Popup in dark theme](docs/popup-dark.png) |
+
 ## Installation
 
 1. Download this repository using **Code → Download ZIP**, then extract it (or clone the repository).
