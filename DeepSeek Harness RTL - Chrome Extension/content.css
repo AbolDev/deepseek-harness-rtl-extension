@@ -1,0 +1,18 @@
+[data-dsh-auto-dir="rtl"] {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: isolate;
+}
+[data-dsh-auto-dir="ltr"] {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate;
+}
+html[data-dsh-rtl-active] :is(pre, code, kbd, samp, table, .monaco-editor, .cm-editor, .xterm) {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate;
+}
+html[data-dsh-rtl-active] :is(code, kbd, samp) { display: inline-block; max-width: 100%; }
+html[data-dsh-rtl-active] pre code { display: block; }
+html[data-dsh-rtl-active] a { unicode-bidi: isolate; }

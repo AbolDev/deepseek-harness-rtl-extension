@@ -1,0 +1,22 @@
+# Dependencies and test output
+node_modules/
+tests/screenshots/
+playwright-report/
+test-results/
+coverage/
+
+# Local captures and scratch files
+gui-snapshot.html
+_rtl_logic_test.mjs
+*.log
+*.zip
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

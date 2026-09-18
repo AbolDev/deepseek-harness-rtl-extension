@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>DeepSeek Harness RTL</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-state="loading">
+  <main class="shell">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true"><img src="icons/logo.svg" width="38" height="38" alt=""></span>
+        <div><span class="brand-name">Harness <span class="brand-tag">RTL</span></span><p class="brand-subtitle">A natural reading experience</p></div>
+      </div>
+      <span class="version" id="version"></span>
+    </header>
+
+    <section class="hero" aria-labelledby="headline">
+      <h1 id="headline">Every language. <span>The right direction.</span></h1>
+      <p class="intro">Natural reading. Your code stays untouched.</p>
+    </section>
+
+    <section class="control-card" aria-labelledby="control-title">
+      <div class="control-row">
+        <div><h2 id="control-title">Automatic direction</h2><p id="control-help">Applies to supported Harness tabs</p></div>
+        <label class="switch"><input id="enabled" type="checkbox" role="switch" aria-labelledby="control-title" aria-describedby="control-help" disabled><span class="switch-track" aria-hidden="true"></span></label>
+      </div>
+      <div class="state-row"><span class="state-dot" aria-hidden="true"></span><span id="state-label">Loading settings…</span><span class="state-detail" id="state-detail">Please wait</span></div>
+    </section>
+
+    <div class="feature-row" aria-label="Features"><span><i aria-hidden="true">✓</i> Live updates</span><span><i aria-hidden="true">✓</i> Code-safe</span><span><i aria-hidden="true">✓</i> Local only</span></div>
+    <p id="status" role="status" aria-live="polite" hidden></p>
+    <button id="retry" class="retry" type="button" hidden>Try again</button>
+
+    <details class="help">
+      <summary>Where does it work?<svg aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m4 6 4 4 4-4"/></svg></summary>
+      <div class="help-body">Works on DeepSeek Harness at <code>http://localhost:3080</code> or <code>http://127.0.0.1:3080</code>. Refresh your Harness tab once after installing or updating. Other websites are not changed.</div>
+    </details>
+    <footer><span class="privacy-mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m8 2 5 2v4c0 3-5 6-5 6S3 11 3 8V4l5-2Z"/><path d="m5.5 8 1.5 1.5 3-3"/></svg></span><span>No tracking. No external requests.</span></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
