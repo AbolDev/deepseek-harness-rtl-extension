@@ -13,7 +13,8 @@ A lightweight Chrome extension that makes Persian, Arabic, and Hebrew text read 
 - Left-to-right code blocks and table column order; text inside table cells can use its own direction.
 - An English popup with system-aware light/dark themes and a stable 440 × 360 layout.
 - A persistent on/off switch shared across supported tabs.
-- No analytics, external fonts, or external network requests from the extension.
+- A minimal update notice: at most once every 24 hours, the popup checks the latest GitHub release and shows a small banner when a newer version exists. Dismissible per version.
+- No analytics, external fonts, or tracking of any kind.
 
 This extension adjusts text direction, not the overall app layout. It is an independent project, not an official DeepSeek Harness extension.
 
@@ -75,7 +76,7 @@ The extension changes presentation only: it does not rewrite message text or inp
 
 ## Privacy and permissions
 
-The only declared API permission is **storage**, used to save the enabled preference locally. The content script reads page text to determine direction but does not store or transmit conversation content. Development tools may download test dependencies or a browser; these are not part of the installed extension.
+The only declared API permission is **storage**, used to save the enabled preference locally. The content script reads page text to determine direction but does not store or transmit conversation content. When the popup is opened, it may make one request to `api.github.com` to fetch the latest release version (at most once per 24 hours); no page content, identifiers, or usage data are sent. Development tools may download test dependencies or a browser; these are not part of the installed extension.
 
 ## Repository structure
 
@@ -88,6 +89,7 @@ DeepSeek Harness RTL - Chrome Extension/
 tests/
   rtl.test.mjs
   popup.test.mjs
+  update.test.mjs
   popup.visual.mjs
 README.md
 README.fa.md

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DeepSeek Harness RTL",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Automatic right-to-left text support for the local DeepSeek Harness GUI, keeping English and code left-to-right.",
   "browser_specific_settings": {
     "gecko": {

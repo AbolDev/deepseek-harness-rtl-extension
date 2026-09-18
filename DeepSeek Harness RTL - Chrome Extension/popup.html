@@ -38,7 +38,12 @@
       <summary>Where does it work?<svg aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m4 6 4 4 4-4"/></svg></summary>
       <div class="help-body">Works on DeepSeek Harness at <code>http://localhost:3080</code> or <code>http://127.0.0.1:3080</code>. Refresh your Harness tab once after installing or updating. Other websites are not changed.</div>
     </details>
-    <footer><span class="privacy-mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m8 2 5 2v4c0 3-5 6-5 6S3 11 3 8V4l5-2Z"/><path d="m5.5 8 1.5 1.5 3-3"/></svg></span><span>No tracking. No external requests.</span><a class="repo-link" href="https://github.com/AbolDev/deepseek-harness-rtl-extension" target="_blank" rel="noopener" title="GitHub repository">GitHub</a></footer>
+    <div id="update" class="update" hidden>
+      <span id="update-text"></span>
+      <a id="update-link" href="https://github.com/AbolDev/deepseek-harness-rtl-extension/releases" target="_blank" rel="noopener">View update</a>
+      <button id="update-dismiss" type="button" aria-label="Dismiss update notice">✕</button>
+    </div>
+    <footer><span class="privacy-mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m8 2 5 2v4c0 3-5 6-5 6S3 11 3 8V4l5-2Z"/><path d="m5.5 8 1.5 1.5 3-3"/></svg></span><span>No tracking. Update check only.</span><a class="repo-link" href="https://github.com/AbolDev/deepseek-harness-rtl-extension" target="_blank" rel="noopener" title="GitHub repository">GitHub</a></footer>
   </main>
   <script src="popup.js"></script>
 </body>

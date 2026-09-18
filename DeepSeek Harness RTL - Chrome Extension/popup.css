@@ -85,6 +85,11 @@ footer { justify-content: center; gap: 5px; color: var(--muted); font-size: 10px
 .privacy-mark svg { width: 13px; height: 13px; stroke: currentColor; stroke-width: 1.2; display: block; }
 .repo-link { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
 .repo-link:hover, .repo-link:focus-visible { color: var(--text); }
+.update { display: flex; align-items: center; gap: 8px; justify-content: center; margin-top: 10px; padding: 7px 10px; border: 1px solid var(--accent); border-radius: 10px; font-size: 11px; color: var(--text); }
+.update[hidden] { display: none; }
+.update-link, #update-link { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+#update-dismiss { margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 11px; cursor: pointer; padding: 2px 4px; }
+#update-dismiss:hover { color: var(--text); }
 @media (max-width: 340px) { .shell { padding: 16px; } h1 { font-size: 27px; } .code-badge { font-size: 8px; } .brand-subtitle { font-size: 10px; } }
 @media (prefers-reduced-motion: reduce) { *, *::after { transition: none !important; } }
 @media (forced-colors: active) { .switch-track { border: 1px solid ButtonText; } .switch-track::after { background: ButtonText; } .switch input:checked + .switch-track { background: Highlight; } }

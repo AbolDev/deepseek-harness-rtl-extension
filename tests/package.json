@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node rtl.test.mjs && node popup.test.mjs",
+    "test": "node rtl.test.mjs && node popup.test.mjs && node update.test.mjs",
     "test:visual": "node popup.visual.mjs"
   },
   "devDependencies": {

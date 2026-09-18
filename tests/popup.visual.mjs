@@ -12,8 +12,10 @@ try {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     // Render actual popup files, with only the Chrome storage/runtime API stubbed.
+    // popup.js calls storage.get twice (settings + update check), so queue every callback.
     await page.addInitScript(() => {
-      window.chrome = {runtime:{getManifest:()=>({version:'1.0.0'})}, storage:{local:{get:(defaults,cb)=>{ window.finishSettings = () => cb(defaults); },set:(value,cb)=>cb()}}};
+      const pending = [];
+      window.chrome = {runtime:{getManifest:()=>({version:'1.0.0'})}, storage:{local:{get:(defaults,cb)=>{ pending.push(cb); window.finishSettings = () => pending.splice(0).forEach(fn => fn(defaults)); },set:(value,cb)=>cb()}}};
     });
     await page.goto(new URL('popup.html', extension).href);
     await page.locator('body[data-state="loading"]').waitFor();
