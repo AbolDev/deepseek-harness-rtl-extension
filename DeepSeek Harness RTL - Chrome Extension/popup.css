@@ -83,6 +83,8 @@ summary:focus-visible, .retry:focus-visible { outline: 2px solid var(--accent); 
 .help-body code { overflow-wrap: anywhere; color: var(--text); font-size: 10px; }
 footer { justify-content: center; gap: 5px; color: var(--muted); font-size: 10px; margin-top: 10px; }
 .privacy-mark svg { width: 13px; height: 13px; stroke: currentColor; stroke-width: 1.2; display: block; }
+.repo-link { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.repo-link:hover, .repo-link:focus-visible { color: var(--text); }
 @media (max-width: 340px) { .shell { padding: 16px; } h1 { font-size: 27px; } .code-badge { font-size: 8px; } .brand-subtitle { font-size: 10px; } }
 @media (prefers-reduced-motion: reduce) { *, *::after { transition: none !important; } }
 @media (forced-colors: active) { .switch-track { border: 1px solid ButtonText; } .switch-track::after { background: ButtonText; } .switch input:checked + .switch-track { background: Highlight; } }
